@@ -7,19 +7,45 @@ body {
 ul,
 ol {
   list-style-type: none;
+  margin: 0;
+  padding-left: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0;
 }
 
 a {
   text-decoration: none;
 }
 
+img {
+  display: block;
+}
+
+.visually-hidden {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  margin: -1px;
+  border: 0;
+  padding: 0;
+
+  white-space: nowrap;
+  clip-path: inset(100%);
+  clip: rect(0 0 0 0);
+  overflow: hidden;
+}
+
 button {
   cursor: pointer;
   font-family: 'Montserrat', sans-serif;
-}
-
-.orange {
-  color: #fd9222;
 }
 
 .section-title {
@@ -31,17 +57,45 @@ button {
   text-align: center;
   color: #111;
 }
+
+.orange {
+  color: #fd9222;
+}
+
+.container {
+  width: 1166px;
+  padding-left: 15px;
+  padding-right: 15px;
+  margin: 0 auto;
+}
 /* #region Header */
+.header {
+  /* padding-top: 28px; */
+  /* padding-bottom: 28px; */
+}
+
 .header-logo {
   font-weight: 700;
   font-size: 18px;
   line-height: 1.11;
   letter-spacing: -0.03em;
   color: #111;
+  padding-top: 28px;
+  padding-bottom: 28px;
 }
 
 .header-logo-italic {
   font-style: italic;
+}
+
+.header-container {
+  display: flex;
+  justify-content: space-between;
+}
+
+.header-nav-list {
+  display: flex;
+  gap: 24px;
 }
 
 .item-nav-link {
@@ -50,6 +104,9 @@ button {
   line-height: 1.14286;
   letter-spacing: -0.02em;
   color: #111;
+  padding-top: 30px;
+  padding-bottom: 30px;
+  display: inline-block;
 }
 
 .item-nav-link:hover,
@@ -61,6 +118,12 @@ button {
 /* #region Hero */
 .page-hero {
   background-color: #1e1823;
+  margin-bottom: 72px;
+  border-radius: 30px;
+}
+
+.hero-content {
+  padding: 375px 40px 45px 40px;
 }
 
 .hero-title {
@@ -69,6 +132,13 @@ button {
   line-height: 1.21;
   letter-spacing: -0.03em;
   color: #fff;
+  margin-bottom: 32px;
+  max-width: 484px;
+}
+
+.hero-buttons {
+  display: flex;
+  align-items: center;
 }
 
 .hero-btn {
@@ -76,6 +146,10 @@ button {
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  padding: 14px 40px;
+  border-radius: 100px;
+  border: none;
+  margin-right: 14px;
 }
 
 .hero-btn:hover,
@@ -88,6 +162,9 @@ button {
   font-weight: 600;
   font-size: 14px;
   color: #fff;
+  border: 1px solid #fff;
+  border-radius: 100px;
+  padding: 14px 40px;
 }
 
 .hero-link-made:hover,
@@ -101,6 +178,7 @@ button {
   line-height: 1.29;
   letter-spacing: -0.03em;
   color: #fff;
+  margin-left: auto;
 }
 
 .hero-link-scroll:hover,
@@ -112,19 +190,29 @@ button {
 /* #region Benefits */
 .Benefits {
   background-color: #1e1823;
+  padding-top: 50px;
+  padding-bottom: 50px;
 }
+
 .benefits-title {
 }
+
 .benefits-list {
+  padding-left: 36px;
+  padding-right: 36px;
+  display: flex;
+  gap: 70px;
 }
 .benefits-list-item {
+  width: calc((100% - 70px * 2) / 3);
 }
 .benefits-list-item-title {
   font-weight: 600;
   font-size: 18px;
   color: #fff;
+  margin-bottom: 18px;
 }
-.benefits-list-item-text {
+.benefits-item-text {
   font-weight: 400;
   font-size: 14px;
   letter-spacing: -0.02em;
@@ -133,6 +221,62 @@ button {
 /* #endregion Benefits */
 
 /* #region Ingredients */
+.ingredients {
+  padding-top: 100px;
+  padding-bottom: 50px;
+}
+.section-title {
+}
+
+.ingrefients-title {
+  max-width: 411px;
+  margin: 0 auto;
+  margin-bottom: 28px;
+}
+.ingredients-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.28571;
+  letter-spacing: -0.02em;
+  text-align: center;
+  max-width: 486px;
+  margin: 0 auto;
+  margin-bottom: 50px;
+}
+.ingredients-list {
+  display: flex;
+  gap: 19px;
+}
+
+.ingredients-list-item {
+  border: 1px solid #fd9222;
+  border-radius: 15px;
+  width: calc((100% - 19px * 3) / 4);
+  padding: 28px 32px;
+}
+
+.ingredients-img {
+  margin-bottom: 36px;
+}
+
+.ingredients-list-item:nth-child(4n + 1) {
+  background-color: #fd9222;
+  color: #fff;
+}
+
+.ingredients-list-item:nth-child(4n + 3) {
+  background-color: #1e1823;
+  color: #fff;
+  border: none;
+}
+
+.ingredients-subtitle {
+  font-weight: 600;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+  text-transform: uppercase;
+}
 /* #endregion Ingredients */
 
 /* #region Manufacture */
