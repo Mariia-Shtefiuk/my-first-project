@@ -1,3 +1,4 @@
+/* #region custom */
 body {
   font-family: 'Montserrat', sans-serif;
   background-color: #fafafa;
@@ -68,6 +69,8 @@ button {
   padding-right: 15px;
   margin: 0 auto;
 }
+/* #endregion custom */
+
 /* #region Header */
 .header {
   /* padding-top: 28px; */
@@ -91,6 +94,14 @@ button {
 .header-container {
   display: flex;
   justify-content: space-between;
+  align-items: center;
+}
+
+.logo-icon-list {
+  display: flex;
+  gap: 4px;
+  justify-content: center;
+  align-items: center;
 }
 
 .header-nav-list {
@@ -99,6 +110,7 @@ button {
 }
 
 .item-nav-link {
+  position: relative;
   font-weight: 500;
   font-size: 14px;
   line-height: 1.14286;
@@ -113,13 +125,60 @@ button {
 .item-nav-link:focus {
   color: #fd9222;
 }
+
+.current {
+  color: #fd9222;
+}
+
+.current::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 4px;
+  background-color: #fd9222;
+  border-radius: 3px;
+}
+
+.icon-list {
+  display: flex;
+  gap: 18px;
+}
+.icon-item {
+}
+.icon-link {
+  display: flex;
+  align-items: center;
+  justify-items: center;
+}
+
+.icon-link:hover .icon,
+.icon-link:focus .icon {
+  stroke: #fd9222;
+}
+
+.icon {
+  fill: none;
+  stroke: #111;
+}
+
 /* #endregion Header */
 
 /* #region Hero */
 .page-hero {
+  margin: 0 auto;
   background-color: #1e1823;
   margin-bottom: 72px;
   border-radius: 30px;
+  width: 1200px;
+  background-image: linear-gradient(
+      rgba(30, 24, 35, 0.4),
+      rgba(30, 24, 35, 0.4)
+    ),
+    url(../images/hero/chocolate-hero.jpg);
+  background-size: cover;
+  background-repeat: no-repeat;
 }
 
 .hero-content {
@@ -138,7 +197,14 @@ button {
 
 .hero-buttons {
   display: flex;
+  justify-content: space-between;
   align-items: center;
+}
+
+.hero-buttons-list {
+  display: flex;
+  align-items: center;
+  gap: 14px;
 }
 
 .hero-btn {
@@ -172,6 +238,13 @@ button {
   color: #fd9222;
 }
 
+.hero-scroll-list {
+  display: flex;
+  gap: 14px;
+  justify-content: center;
+  align-items: center;
+}
+
 .hero-link-scroll {
   font-weight: 500;
   font-size: 14px;
@@ -181,14 +254,32 @@ button {
   margin-left: auto;
 }
 
+.scroll-link {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 38px;
+  height: 38px;
+  background-color: #fff;
+  border-radius: 50%;
+  fill: #fd9222;
+}
+
 .hero-link-scroll:hover,
 .hero-link-scroll:focus {
   color: #fd9222;
 }
+
+.scroll-link:hover,
+.scroll-link:focus {
+  background-color: #fd9222;
+  fill: #fff;
+}
+
 /* #endregion Hero */
 
 /* #region Benefits */
-.Benefits {
+.benefits {
   background-color: #1e1823;
   padding-top: 50px;
   padding-bottom: 50px;
@@ -249,12 +340,36 @@ button {
 }
 
 .ingredients-list-item {
+  position: relative;
   border: 1px solid #fd9222;
   border-radius: 15px;
   width: calc((100% - 19px * 3) / 4);
+}
+
+.ingredients-block {
   padding: 28px 32px;
 }
 
+.overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: #fff;
+  color: black;
+  overflow: auto;
+  padding: 20px;
+  opacity: 0;
+  transform: translateY(100%);
+  border-radius: 15px;
+  transition: transform 300ms ease-in-out 100ms, opacity 300ms ease-in-out 100ms;
+}
+
+.ingredients-list-item:hover .overlay {
+  opacity: 1;
+  transform: translateY(0);
+}
 .ingredients-img {
   margin-bottom: 36px;
 }
