@@ -215,7 +215,6 @@ button {
   padding: 14px 40px;
   border-radius: 100px;
   border: none;
-  margin-right: 14px;
 }
 
 .hero-btn:hover,
@@ -296,7 +295,35 @@ button {
 }
 .benefits-list-item {
   width: calc((100% - 70px * 2) / 3);
+  position: relative;
 }
+
+.line {
+  color: rgba(255, 255, 255, 0.5);
+}
+
+.line::after {
+  content: '';
+  position: absolute;
+  right: -25%;
+  bottom: 50%;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  width: 124px;
+  height: 0px;
+  transform: rotate(-90deg);
+}
+
+.benefits-icon {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  border: 1px solid rgba(255, 255, 255, 0.5);
+  border-radius: 365px;
+  width: 62px;
+  height: 62px;
+  margin-bottom: 32px;
+}
+
 .benefits-list-item-title {
   font-weight: 600;
   font-size: 18px;
@@ -370,6 +397,52 @@ button {
   opacity: 1;
   transform: translateY(0);
 }
+
+.overlay-title {
+  font-weight: 600;
+  font-size: 18px;
+  letter-spacing: -0.03em;
+  text-transform: uppercase;
+  color: #111;
+  margin-bottom: 8px;
+}
+
+.overlay-btn-list {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 6px;
+  margin-bottom: 14px;
+}
+
+.overlay-btn-orange {
+  background-color: #fd9222;
+  font-weight: 400;
+  font-size: 10px;
+  line-height: 1.2;
+  color: #fff;
+  padding: 6px 16px;
+  border-radius: 35px;
+  border: none;
+}
+
+.overlay-link {
+  font-weight: 400;
+  font-size: 10px;
+  border: 1px solid #fd9222;
+  border-radius: 35px;
+  padding: 6px 16px;
+  line-height: 1.2;
+  background-color: #fafafa;
+}
+
+.overlay-text {
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
 .ingredients-img {
   margin-bottom: 36px;
 }
@@ -394,8 +467,73 @@ button {
 }
 /* #endregion Ingredients */
 
-/* #region Manufacture */
-/* #endregion Manufacture */
+/* #region Made */
+.made-container {
+  padding: 50px 0;
+}
+
+.section-title {
+  margin-bottom: 50px;
+}
+
+.made-content {
+  display: flex;
+  gap: 20px;
+}
+
+.made-img {
+  border-radius: 15px;
+}
+
+.made-text {
+  padding: 32px;
+  background-color: #fff;
+  border-radius: 15px;
+}
+
+.made-subtitle {
+  font-weight: 600;
+  font-size: 18px;
+  line-height: 1.33;
+  margin-bottom: 28px;
+  width: 350px;
+}
+.made-list {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 24px;
+  width: 452px;
+}
+
+.made-list-item {
+  position: relative;
+  padding-left: 16px;
+  font-weight: 400;
+  font-size: 14px;
+  line-height: 1.29;
+  letter-spacing: -0.02em;
+}
+
+.point {
+  color: #4c4c4c;
+}
+
+.point::before {
+  content: '';
+  position: absolute;
+  top: 5px;
+  left: 0;
+  width: 8px;
+  height: 8px;
+  background-color: #4c4c4c;
+  border-radius: 50%;
+  border: 1px solid #eceded;
+}
+
+.made-item-text {
+}
+/* #endregion Made */
 
 /* #region Review */
 /* #endregion Review */
@@ -403,6 +541,30 @@ button {
 /* #region Footer */
 .footer {
   background-color: #1e1823;
+  padding-left: 32px;
+  padding-right: 26px;
+  padding-bottom: 56px;
+}
+
+.footer-container {
+  position: relative;
+  display: flex;
+  justify-content: space-between;
+  padding: 50px 0;
+}
+
+.footer-line {
+  color: rgba(255, 255, 255, 0.1);
+}
+
+.footer-line::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  width: 1136px;
+  height: 0px;
 }
 
 .footer-text {
@@ -411,6 +573,7 @@ button {
   line-height: 1.21;
   letter-spacing: -0.02em;
   color: #fff;
+  width: 300px;
 }
 
 .footer-addr {
@@ -422,12 +585,14 @@ button {
   font-size: 14px;
   line-height: 1.29;
   color: #fff;
+  margin-bottom: 14px;
 }
 
 .footer-addr-list {
 }
 
 .footer-addr-item {
+  margin-bottom: 4px;
 }
 
 .footer-addr-link {
