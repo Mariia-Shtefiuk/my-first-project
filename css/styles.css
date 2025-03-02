@@ -687,3 +687,42 @@ button {
 }
 
 /* #endregion Footer */
+
+/* #region Backdrop */
+.backdrop {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(46, 47, 66, 0.4);
+}
+
+.modal {
+  width: 517px;
+  min-height: 794px;
+  background-color: #fafafa;
+  border-radius: 15px;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+.close-btn {
+  padding: 0;
+  border: 0;
+  line-height: 0;
+  stroke: #1e1823;
+  background-color: transparent;
+}
+
+.close-btn:hover,
+.close-btn:focus {
+  stroke: #fd9222;
+}
+
+.close-button-icon {
+}
+
+/* #endregion Backdrop */
