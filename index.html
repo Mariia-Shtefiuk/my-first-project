@@ -19,17 +19,15 @@
     <!-- #region Header-->
     <header class="header">
         <div class="container header-container">
-            <ul class="logo-icon-list">
-                <li class="logo-icon-item"><a class="header-logo" href="./index.html"><span
-                            class="header-logo-italic">SIMPLY</span>
-                        CHOCOLATE</a></li>
-                <li class="logo-icon-item"><a class="header-logo-icon" href="./index.html">
-                        <svg class="logo-icon" width="24" height="24">
-                            <use href="./images/icons.svg#chocolate"></use>
-                        </svg>
-                    </a>
-                </li>
-            </ul>
+            <a class="logo" href="./index.html">SIMPLY <span class="logo-style">CHOCOLATE</span>
+                <svg class="logo-icon" width="24" height="24">
+                    <use href="./images/icons.svg#chocolate"></use>
+                </svg>
+            </a>
+            <button type="button" class="btn-mob-menu"><svg class="btn-mob-icon" width="28" height="28">
+                    <use href="./images/icons.svg#burger"></use>
+                </svg>
+            </button>
             <nav class="header-nav">
                 <ul class="header-nav-list">
                     <li class="header-nav-item"><a class="item-nav-link current" href="./index.html">Home</a></li>
@@ -436,6 +434,41 @@
     </div>
     <!--#endregion Backdrop-->
 
+
+
+    <!--#region Mobile-menu-->
+    <div class="mobile-menu is-open">
+        <button class="mob-close-btn" type="button"><svg class="" width="28" height="28">
+                <use href="./images/icons.svg#close"></use>
+            </svg>
+        </button>
+        <nav class="mob-nav">
+            <ul class="mob-nav-list">
+                <li class="mob-nav-item"><a class="item-mob-link current-mob" href="./index.html">Home</a></li>
+                <li class="mob-nav-item"><a class="item-mob-link" href="#made">How it&#10076;s made?</a>
+                </li>
+                <li class="mob-nav-item"><a class="item-mob-link" href="#chocolate">Chocolate is
+                        loved</a></li>
+            </ul>
+        </nav>
+        <ul class="mob-icon-list">
+            <li class="mob-icon-item">
+                <a href="#" class="mob-icon-link">
+                    <svg class="icon" width="24" height="24">
+                        <use href="./images/icons.svg#instagram"></use>
+                    </svg>
+                </a>
+            </li>
+            <li class="mob-icon-item">
+                <a href="#" class="mob-icon-link">
+                    <svg class="icon" width="24" height="24">
+                        <use href="./images/icons.svg#twitter"></use>
+                    </svg>
+                </a>
+            </li>
+        </ul>
+    </div>
+    <!--#endregion Mobile-menu-->
 </body>
 
 </html>
